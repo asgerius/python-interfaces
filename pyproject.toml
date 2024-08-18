@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python_interfaces"
+version = "0.1.0"
+description = "Python interfaces to faster languages"
+authors = [
+    {name = "Asger Schultz"},
+]
+readme = "README.md"
+dependencies = [
+  "pelutils>=3.1",
+  "torch>=2.2.0",
+  "numpy",
+  "tqdm",
+]
