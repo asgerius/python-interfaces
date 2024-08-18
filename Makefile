@@ -4,8 +4,10 @@ install:
 	pip install -e .
 
 all:
+	make clean
 	make c
 	make cpp
+	make rust
 
 c:
 	mkdir -p build
@@ -20,3 +22,6 @@ rust:
 	cd librust && cargo build --release
 	cp librust/target/release/liblibrust.so build/librust.so
 
+clean:
+	rm -rf build
+	rm -rf librust/target
